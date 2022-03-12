@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
-module.exports = new Sequelize('users', 'shimels', '1234', {
-    host: 'localhost',
+module.exports = new Sequelize('process.env.DB_NAME', 'process.env.DB_USER', 'process.env.DB_PSW', {
+    host: 'process.env.DB_HOST',
     dialect: 'postgres',
     define: {
         timestamps: false
